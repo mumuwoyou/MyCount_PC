@@ -28,7 +28,7 @@ namespace MyCount
 
         private void MasterDetailForm_Load(object sender, EventArgs e)
         {
-            dbPath = $"{Environment.CurrentDirectory}\\testdb.db";
+            dbPath = $"{Environment.CurrentDirectory}\\mycount.db";
             xls_Filename = "";
         }
 
@@ -78,6 +78,8 @@ namespace MyCount
             int rowIndex = 1;   // 起始行为 1
             int colIndex = 1;   // 起始列为 1
             worksheet.Cells.Style.Fill.PatternType = ExcelFillStyle.Solid;
+            worksheet.Cells.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
+
             worksheet.Cells[rowIndex, colIndex].Value = "代码";
             worksheet.Cells[rowIndex, colIndex].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.Aqua);
             worksheet.Cells[rowIndex, colIndex].Style.Border.BorderAround(ExcelBorderStyle.Thin, System.Drawing.ColorTranslator.FromHtml("#0097DD"));

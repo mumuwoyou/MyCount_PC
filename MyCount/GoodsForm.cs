@@ -20,7 +20,7 @@ namespace MyCount
         private string dbPath;
         private void Form1_Load(object sender, EventArgs e)
         {
-            dbPath = $"{Environment.CurrentDirectory}\\testdb.db";
+            dbPath = $"{Environment.CurrentDirectory}\\mycount.db";
             using (var db = new AndroidDb(dbPath))
             {
                 var goods = db.Goods.ToList();

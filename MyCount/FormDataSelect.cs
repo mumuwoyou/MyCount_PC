@@ -149,7 +149,7 @@ namespace MyCount
             try
             {
                 //string outPcPath = Tools.CombinePath(cbbPcPath.Text, "testdb.db");
-                string outPcPath = "testdb.db";
+                string outPcPath = "mycount.db";
                 m_log.Info("PC下载路径：" + outPcPath);
                 if (IsSDCard)//内置存储卡 
                 {
@@ -191,7 +191,7 @@ namespace MyCount
             try
             {
                 var devPath = IsSDCard ? sdCardPath : extSdCardPath;
-                string dbPath = Tools.CombinePath(strPCFilePath, "testdb.db");
+                string dbPath = Tools.CombinePath(strPCFilePath, "mycount.db");
                 //string picPath = UtilsString.CombinePath(strPCFilePath, "image"); 
                 if (AdbHelper.CopyToDevice(Convert.ToString(cbbDevices.SelectedItem), dbPath, devPath))
                 {
@@ -279,7 +279,7 @@ namespace MyCount
                 {
                     lsbFiles.Items.Clear();
                     //string dbPath = Tools.CombinePath(strPCFilePath, "testdb.db");
-                    string dbPath = "testdb.db";
+                    string dbPath = "mycount.db";
                     if (Tools.FileExist(dbPath))
                     {
                         lsbFiles.Items.Add(dbPath);

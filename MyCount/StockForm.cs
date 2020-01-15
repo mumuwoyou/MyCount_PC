@@ -49,7 +49,7 @@ namespace MyCount
 
         private void StockForm_Load(object sender, EventArgs e)
         {
-            dbPath = $"{Environment.CurrentDirectory}\\testdb.db";
+            dbPath = $"{Environment.CurrentDirectory}\\mycount.db";
             using (var db = new AndroidDb(dbPath))
             {
                 var stock = db.Stock.ToList();
